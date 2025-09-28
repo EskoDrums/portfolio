@@ -3,32 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume - Azeb Mendstu</title>
+  <title>Skills - Azeb Mendstu</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .skills-section {
+      padding: 60px 20px;
+      background: linear-gradient(to right, #f8f9fa, #eef2f7);
+      text-align: center;
+    }
+
+    .skills-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #6a11cb;
+    }
+
+    .skills-section p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .skills-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .skill {
+      margin-bottom: 25px;
+    }
+
+    .skill h3 {
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #2575fc;
+    }
+
+    .progress-bar {
+      position: relative;
+      height: 20px;
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar span {
+      display: block;
+      height: 100%;
+      border-radius: 10px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      width: 0;
+      transition: width 2s ease;
+    }
+
+    /* Animation trigger */
+    .progress-bar.visible span {
+      width: var(--progress);
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Resume</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-<section>
-  <h2>Education</h2>
-  <p>BSc in Information Technology – 3rd Year</p>
-  <h2>Experience</h2>
-  <p>Worked on small academic and personal projects using web technologies.</p>
-  <h2>Download Resume</h2>
-  <p><a href="#">Click here to download my resume (PDF)</a></p>
-</section>
-<footer>
-  <p>&copy; 2025 Azeb Mendstu | All Rights Reserved</p>
-</footer>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html" class="active">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Skills Section -->
+  <section class="skills-section">
+    <h1>My Skills</h1>
+    <p>
+      Over the course of my IT studies, I have gained knowledge in programming, web development,  
+      database management, and problem-solving. These skills help me design, develop, and deliver  
+      effective digital solutions.
+    </p>
+
+    <div class="skills-container">
+      <div class="skill">
+        <h3>HTML & CSS</h3>
+        <div class="progress-bar" style="--progress: 90%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="progress-bar" style="--progress: 80%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>Python</h3>
+        <div class="progress-bar" style="--progress: 75%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>Database Management (SQL)</h3>
+        <div class="progress-bar" style="--progress: 70%;">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <h3>Problem-Solving</h3>
+        <div class="progress-bar" style="--progress: 85%;">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    function showProgress() {
+      progressBars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          bar.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", showProgress);
+    window.addEventListener("load", showProgress);
+  </script>
 </body>
 </html>

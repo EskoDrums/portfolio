@@ -3,32 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Azeb Mendstu</title>
+  <title>Projects - Azeb Mengistu</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .projects-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #6a11cb;
+    }
+
+    .projects-section p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #f8f9fa;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card .content {
+      padding: 20px;
+    }
+
+    .project-card h3 {
+      color: #2575fc;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      padding: 8px 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background: linear-gradient(to right, #2575fc, #6a11cb);
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>My Projects</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-<section>
-  <h2>Highlighted Projects</h2>
-  <ul>
-    <li><b>Expense Tracker</b> – A web app to manage expenses.</li>
-    <li><b>Student Portal</b> – A simple system for managing student info.</li>
-    <li><b>Portfolio Website</b> – This very website 😊</li>
-  </ul>
-</section>
-<footer>
-  <p>&copy; 2025 Azeb Mendstu | All Rights Reserved</p>
-</footer>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="resume.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <h1>My Projects</h1>
+    <p>
+      Here are some of the projects I’ve worked on during my IT journey.  
+      They represent my skills in web development, programming, and problem-solving.  
+      Each project taught me something new and helped me grow as a developer.
+    </p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="expense.jpg" alt="Expense Manager Bot">
+        <div class="content">
+          <h3>Expense Manager Bot</h3>
+          <p>A Telegram bot that helps users track, manage, and analyze their expenses easily.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="photo_2025-09-28_21-00-13.jpg" alt="Portfolio Website">
+        <div class="content">
+          <h3>Portfolio Website</h3>
+          <p>This portfolio website you’re exploring now! Designed with HTML, CSS, and JavaScript.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="calculator.jpg" alt="Calculator App">
+        <div class="content">
+          <h3>Calculator App</h3>
+          <p>A simple yet stylish web-based calculator built with HTML, CSS, and JavaScript.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
